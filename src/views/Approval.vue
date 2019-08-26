@@ -1,13 +1,13 @@
 <template>
-<!-- 资金总览页面 -->
-    <div class="capital">
-        
+<!-- 我是审批页面 -->
+    <div class="approval">
+        我是审批页面
     </div>
 </template>
 
 <script>
 export default {
-    name: 'capital'
+    name: 'approval'
 }
 </script>
 

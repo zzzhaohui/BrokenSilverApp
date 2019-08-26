@@ -1,4 +1,5 @@
 <template>
+<!-- 我是首页 -->
   <div class="home">
     <div class="header">
       <div class="header-left">
@@ -12,10 +13,10 @@
     </div>
     <div class="conter"> 
         <ul>
-          <li>创建</li>
-          <li>审批</li>
-          <li>企业采集</li>
-          <li>全员持股</li>
+          <li @click="onEstablish">创建</li>
+          <li @click="onApproval">审批</li>
+          <li @click="onEnterprisePurchasing">企业采集</li>
+          <li @click="onShareHolding">全员持股</li>
         </ul>
     </div>
   </div>
@@ -26,6 +27,25 @@
 
 export default {
   name: 'home',
+  data(){
+    return {
+      
+    }
+  },
+  methods:{
+    onEstablish(){  //创建审批
+      this.$router.push('/Establish')
+    },
+    onApproval(){ //审批查看
+      this.$router.push('/Approval')
+    },
+    onEnterprisePurchasing(){  //企业采集
+      this.$router.push('/EnterprisePurchasing')
+    },
+    onShareHolding(){ //全员持股
+      this.$router.push('/ShareHolding')
+    }
+  },
   components: {
     
   }

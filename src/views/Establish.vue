@@ -1,7 +1,7 @@
 <template>
-<!-- 资金总览页面 -->
+<!-- 我是创建审批的页面 -->
     <div class="capital">
-        
+        我是创建审批的页面
     </div>
 </template>
 

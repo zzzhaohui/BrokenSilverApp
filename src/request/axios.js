@@ -5,14 +5,15 @@
 import axios from 'axios';
 import router from '../router';
 import store from '../store/index';
-import { MessageBox } from 'mint-ui';
+import { Popup } from 'vant';
+
 
 /** 
  * 提示函数 
  * 禁止点击蒙层、显示一秒后关闭
  */
 const tip = msg => {    
-    MessageBox({        
+    Popup({        
         message: msg,        
         duration: 1000,        
         forbidClick: true    

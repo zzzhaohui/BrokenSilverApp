@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
+    <van-button type="default">默认按钮</van-button>
     <div id="nav">
       <ul>
         <li><router-link to="/">Home</router-link></li>
