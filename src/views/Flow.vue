@@ -31,15 +31,17 @@
 
           <ul>
             <li>
-              <van-collapse-item name="3" class="con3">
+              <van-panel title="成本中心" status="请选择 >"></van-panel>
+              <!-- <van-collapse-item name="3" class="con3">
                 <div slot="title">
                   <span>成本中心</span>
                 </div>
                 <div slot="value">请选择</div>
-              </van-collapse-item>
+              </van-collapse-item> -->
             </li>
             <li>
-              <van-collapse-item name="4" class="con4">
+              <van-panel title="报销科目" status="请选择 >"></van-panel>
+              <!-- <van-collapse-item name="4" class="con4">
                 <div slot="title">
                   <span>
                     报销科目
@@ -47,10 +49,11 @@
                   </span>
                 </div>
                 <div slot="value">请选择</div>
-              </van-collapse-item>
+              </van-collapse-item> -->
             </li>
             <li>
-              <van-collapse-item name="5" class="con5">
+              <van-panel title="报销类型" status="时间 >"></van-panel>
+              <!-- <van-collapse-item name="5" class="con5">
                 <div slot="title">
                   <span>
                     报销类型
@@ -58,22 +61,28 @@
                   </span>
                   <span>2019年-07-24至2019-07-24</span>
                 </div>
-              </van-collapse-item>
+              </van-collapse-item> -->
             </li>
             <li>
-              <van-collapse-item name="6" class="con6">
+              <van-panel title="备注">
+                <textarea name="" id="" cols="43" rows="10" placeholder="输入该明细的详情备注（限300字）"></textarea>
+              </van-panel>
+              <!-- <van-collapse-item name="6" class="con6">
                 <div slot="title">
                   <span>备注</span>
                 </div>
                 <textarea name id cols="30" rows="10"></textarea>
                 <div slot="right-icon"></div>
-              </van-collapse-item>
+              </van-collapse-item> -->
             </li>
             <li>
-              <van-collapse-item name="7" class="con7">
+              <van-panel title="图片" >
+                <van-uploader v-model="fileList" multiple :max-count="6" />
+              </van-panel>
+              <!-- <van-collapse-item name="7" class="con7">
                 <div slot="title">图片</div>
                 <van-uploader v-model="fileList" multiple :max-count="6" />
-              </van-collapse-item>
+              </van-collapse-item> -->
             </li>
             <li class="con8">
               <van-uploader>
@@ -81,16 +90,22 @@
               </van-uploader>
             </li>
             <li>
-              <van-collapse-item name="8" class="con9">
+              <van-panel title="明细费用">
+                <textarea name="" id="" cols="43" rows="10" placeholder="输入该明细的详情备注（限300字）"></textarea>
+              </van-panel>
+              <!-- <van-collapse-item name="8" class="con9">
                 <div slot="title">明细费用</div>
                 <textarea name id cols="30" rows="10" placeholder="输入该明细的详情备注（限300字）"></textarea>
-              </van-collapse-item>
+              </van-collapse-item> -->
             </li>
             <li>
-              <van-collapse-item name="9" class="con10">
+              <van-panel title="图片" >
+                <van-uploader v-model="fileList" multiple :max-count="6" />
+              </van-panel>
+              <!-- <van-collapse-item name="9" class="con10">
                 <div slot="title">图片</div>
                 <van-uploader v-model="fileList" multiple :max-count="6" />
-              </van-collapse-item>
+              </van-collapse-item> -->
             </li>
             <li class="con11">
               <van-uploader>
@@ -102,11 +117,37 @@
                 <van-cell title="费用明细" />
                 <van-cell-group>
                   <van-cell title="明细总计" value="￥0.00" />
+                  <van-cell title="明细总计" value="￥0.00" />
                   <van-cell title="1明细" />
                 </van-cell-group>
               </van-cell-group>
             </li>
+            <li class="con12">
+              <van-uploader>
+                <van-button type="primary">+点击添加报销明细</van-button>
+              </van-uploader>
+            </li>
+            <li class="con13">
+              <van-cell-group>
+                <van-cell title="审批人*" value="button" />
+              </van-cell-group>
+              <van-uploader>
+                <van-button type="primary">+点击添加报销明细</van-button>
+              </van-uploader>
+            </li>
+            <li class="con14">
+              <van-cell-group>
+                <van-cell title="审批人*" value="button" />
+              </van-cell-group>
+              <van-uploader>
+                <van-button type="primary">+点击添加报销明细</van-button>
+              </van-uploader>
+            </li>
           </ul>
+          <br />
+          <br />
+          <br />
+          <br />
         </van-collapse-item>
       </van-collapse>
     </div>
