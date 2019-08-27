@@ -7,13 +7,22 @@ import api from './request/api/index'  //调用api接口管理文件
 import './../node_modules/bootstrap/dist/css/bootstrap.min.css';  //引入bootstrap的css文件
 // import './../node_modules/bootstrap/dist/js/bootstrap.min.js';   // 引入bootstrap的js文件
 import './styles/base.css'  //初始化css样式
-import { Button } from 'vant';  //按需求映入对于的组件
-import 'vant/lib/index.css';
 
+import 'vant/lib/index.css'; //vant
+import Vant from 'vant';  
+Vue.use(Vant) 
+
+import ECharts from 'echarts'  //引入echarts模块 
+// import 'echarts/lib/chart/line'
+// Vue.component('chart', ECharts)
+Vue.prototype.$echarts = ECharts
 
 Vue.config.productionTip = false;
 Vue.prototype.$api = api;
-Vue.use(Button)   //使用对应的组件
+
+  
+
+
 
 new Vue({
   router,

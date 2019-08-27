@@ -1,44 +1,54 @@
 <template>
   <div id="app">
-    <router-view/>
-    <van-button type="default">默认按钮</van-button>
-    <div id="nav">
-      <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/flow">Flow</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
-      </ul>
-    </div>
+    <router-view />
+    <van-tabbar v-model="active">
+      <van-tabbar-item icon="home-o" to="/">Home</van-tabbar-item>
+      <van-tabbar-item icon="search" dot to="/flow">flow</van-tabbar-item>
+      <van-tabbar-item icon="contact" info="6" to="/About">About</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
+<script>
+export default {
+  name: "app",
+  data() {
+    return {
+      active: 0,
+    
+    };
+  }
+};
+</script>
+
+
 <style lang="less" scoped>
-*{
+* {
   margin: 0;
   padding: 0;
   list-style: noen;
 }
-#app{
+#app {
   width: 100%;
   height: 100%;
 
-  #nav{
+  #nav {
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
-    ul{
+    ul {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      li{
+      li {
         list-style: none;
-        a{
+        a {
           padding: 6px;
           text-decoration: none;
         }
-        .router-link-exact-active{
+        .router-link-exact-active {
           background: red;
           border-radius: 6%;
         }

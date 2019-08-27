@@ -2,7 +2,7 @@
 <!-- 我是首页 -->
   <div class="home">
     <div class="header">
-      <div class="header-left">
+      <div class="header-left" @click="onCapital">
         <h3>总资产</h3>
         <h5>99,999.00</h5>
       </div>
@@ -13,8 +13,8 @@
     </div>
     <div class="conter"> 
         <ul>
-          <li @click="onEstablish">创建</li>
-          <li @click="onApproval">审批</li>
+          <li @click="onEstablish">创 &nbsp;&nbsp;建</li>
+          <li @click="onApproval">审 &nbsp;&nbsp;批</li>
           <li @click="onEnterprisePurchasing">企业采集</li>
           <li @click="onShareHolding">全员持股</li>
         </ul>
@@ -33,6 +33,9 @@ export default {
     }
   },
   methods:{
+    onCapital(){ //资金总览
+      this.$router.push('/Capital')
+    },
     onEstablish(){  //创建审批
       this.$router.push('/Establish')
     },
@@ -61,6 +64,13 @@ export default {
     justify-content: space-around;
     padding: 20px 0;
     background: #d3e4f8;
+    h3{
+      font-size: 20px;
+    }
+    h5{
+      font-size: 14px;
+      margin-top: 10px;
+    }
   }
   .conter{
     width: 100%;

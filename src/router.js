@@ -11,6 +11,11 @@ export default new Router({
       name: 'home',
       component: Home
     },
+    { //流程审查页面
+      path: '/Flow',
+      name: 'Flow',
+      component: () => import('./views/Flow.vue')  
+    },
     {
       path: '/about',
       name: 'about',
@@ -22,7 +27,7 @@ export default new Router({
     { //Capital 资金总览界面
       path: '/Capital',
       name: 'Capital',
-      component: () => import('./views/Capital.vue')
+      component: () => import('./views/Capital.vue'),
     },
     {//Establish  创建审批流程页面
       path: '/Establish',
