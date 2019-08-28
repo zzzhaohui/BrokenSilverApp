@@ -4,10 +4,10 @@
     <div class="header">
       <div class="header-left" @click="onCapital">
         <h3>总资产</h3>
-        <h5>99,999.00</h5>
+        <h5 class="capi">99,999.00</h5>
       </div>
-      <div class="header-right">
-        <h5>图标</h5>
+      <div class="header-right" @click="onTransfer">
+        <van-icon class="idcard" name="idcard" />
         <h5>付款</h5>
       </div>
     </div>
@@ -36,6 +36,9 @@ export default {
     onCapital(){ //资金总览
       this.$router.push('/Capital')
     },
+    onTransfer(){
+      this.$router.push('/Transfer')
+    },
     onEstablish(){  //创建审批
       this.$router.push('/Establish')
     },
@@ -63,13 +66,15 @@ export default {
     display: flex;
     justify-content: space-around;
     padding: 20px 0;
-    background: #d3e4f8;
+    background: #83aedf;
     h3{
       font-size: 20px;
     }
-    h5{
-      font-size: 14px;
+    .capi{
       margin-top: 10px;
+    }
+    .idcard{
+      font-size: 30px;
     }
   }
   .conter{

@@ -29,6 +29,11 @@ export default new Router({
       name: 'Capital',
       component: () => import('./views/Capital.vue'),
     },
+    { //转账页面
+      path: '/Transfer',
+      name: 'Transfer',
+      component: () => import('./views/Transfer.vue')
+    },
     {//Establish  创建审批流程页面
       path: '/Establish',
       name: 'Establish',

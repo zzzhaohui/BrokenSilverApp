@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view />
-    <van-tabbar v-model="active">
+    <van-tabbar v-model="active" v-if="footShow">
       <van-tabbar-item icon="home-o" to="/">Home</van-tabbar-item>
       <van-tabbar-item icon="search" dot to="/flow">flow</van-tabbar-item>
       <van-tabbar-item icon="contact" info="6" to="/About">About</van-tabbar-item>
@@ -15,8 +15,21 @@ export default {
   data() {
     return {
       active: 0,
-    
+      footShow: true
     };
+  },
+   
+watch: { // 监听路由变化
+    $route (to, from) {
+      console.log(from)
+      // console.log(to.name)
+      let ThisPage = to.name;
+      if (ThisPage === 'Transfer' || ThisPage === 'Capital' || ThisPage === 'Establish' || ThisPage ==='Approval' || ThisPage === 'EnterprisePurchasing' || ThisPage ==='ShareHolding') {
+        this.footShow = false;
+      } else {
+        this.footShow = true;
+      }
+    }
   }
 };
 </script>
