@@ -20,9 +20,6 @@ Vue.prototype.$echarts = ECharts
 Vue.config.productionTip = false;
 Vue.prototype.$api = api;
 
-  
-
-
 
 new Vue({
   router,

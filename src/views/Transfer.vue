@@ -28,28 +28,28 @@
           </li>
           <li>
             <div class="van-cell van-cell--clickable">
-                <div class="van-cell__title">
-                    <span class="custom-title">户名</span>
-                </div>
-                <div class="van-cell__value">
-                    <input type="text" placeholder="请输入收款人姓名">
-                </div>
-                <i class="van-icon van-icon-arrow van-cell__right-icon"></i>
+              <div class="van-cell__title">
+                <span class="custom-title">户名</span>
+              </div>
+              <div class="van-cell__value">
+                <input type="text" placeholder="请输入收款人姓名" />
+              </div>
+              <i class="van-icon van-icon-user-o van-cell__right-icon"></i>
             </div>
           </li>
           <li>
             <div class="van-cell van-cell--clickable">
-                <div class="van-cell__title">
-                    <span class="custom-title">账号</span>
-                </div>
-                <div class="van-cell__value">
-                    <input type="text" placeholder="请输入收款人账号">
-                </div>
-                <i class="van-icon van-icon-arrow van-cell__right-icon"></i>
+              <div class="van-cell__title">
+                <span class="custom-title">账号</span>
+              </div>
+              <div class="van-cell__value">
+                <input type="text" placeholder="请输入收款人账号" />
+              </div>
+              <i class="van-icon van-icon-scan van-cell__right-icon"></i>
             </div>
           </li>
           <li>
-              <!-- <div class="van-cell" @click="onSele">
+            <!-- <div class="van-cell" @click="onSele">
                   <div class="van-cell__title">
                       <span class="custom-title">银行</span>
                   </div>
@@ -57,7 +57,7 @@
                       <span>选择银行</span>
                   </div>
                   <i class="van-icon van-icon-arrow van-cell__right-icon"></i>
-              </div> -->
+            </div>-->
             <van-cell value="请选择银行" is-link clickable @click="onSele">
               <template slot="title">
                 <span class="custom-title">银行</span>
@@ -111,10 +111,11 @@
             <div class="van-cell van-cell--clickable">
               <div class="van-cell__title">
                 <span class="custom-title">
-                  附&nbsp;&nbsp;件 <p>点击添加附件</p>
+                  附&nbsp;&nbsp;件
+                  <p>点击添加附件</p>
                   <div>
-                      <i class="van-icon van-icon-friends-o van-button__icon"></i>
-                      <input type="file" accept="image/*" class="van-uploader__input" name id />
+                    <i class="van-icon van-icon-friends-o van-button__icon"></i>
+                    <input type="file" accept="image/*" class="van-uploader__input" name id />
                   </div>
                 </span>
                 <div>提示：若是公转私请上传相关电子证明材料</div>
@@ -122,7 +123,7 @@
             </div>
           </li>
           <li>
-              <div class="van-cell van-cell--clickable">
+            <!-- <div class="van-cell van-cell--clickable">
                   <div class="van-cell__title">
                       <span class="">用途</span>
                   </div>
@@ -130,11 +131,18 @@
                       <span>请输入文字</span>
                   </div>
                   <i class="van-icon van-icon-arrow-down van-cell__right-icon" @click="onAdd"></i>
-              </div>
+            </div>-->
+            <van-collapse v-model="activeNames" class="con4-input">
+              <van-collapse-item title="用途" value="点击输入内容" name="2" icon>
+                <textarea name id cols="40" rows="5"></textarea>
+              </van-collapse-item>
+            </van-collapse>
           </li>
         </ul>
       </div>
-      <van-button class="btnSubmi" round type="danger" color="#017ef4">提交</van-button>
+      <div class="btnBox">
+        <van-button class="btnSubmi" round type="danger" color="#017ef4">提交</van-button>
+      </div>
     </div>
   </div>
 </template>
@@ -143,7 +151,9 @@
 export default {
   name: "Transfer",
   data() {
-    return {};
+    return {
+      activeNames: [""]
+    };
   },
   methods: {
     onClickLeft() {
@@ -152,17 +162,19 @@ export default {
     onClickRight() {
       alert("暂未定义");
     },
-    onSele(){ //选择银行 
-        alert('选择银行')
+    onSele() {
+      //选择银行
+      alert("选择银行");
     },
-    onChoiceBank(){ //付款卡
-        alert('选择付款卡')
+    onChoiceBank() {
+      //付款卡
+      alert("选择付款卡");
     },
-    onAdd(){ //用途说明
-        alert('用途说明')
+    onAdd() {
+      //用途说明
+      alert("用途说明");
     }
-  },
- 
+  }
 };
 </script>
 
@@ -171,10 +183,12 @@ export default {
   width: 100%;
   .header {
     width: 100%;
-    div,span,i{
-        // background: #f8f8f8;
-    background: #597fae;
-    color: #fff;
+    div,
+    span,
+    i {
+      // background: #f8f8f8;
+      background: #597fae;
+      color: #fff;
     }
   }
   .conter {
@@ -189,12 +203,17 @@ export default {
           .van-cell__title {
             text-align: left;
           }
-          .van-cell__value{
-                input{
-                    text-align: center;
-                    border: none;
-                }
+          .van-cell__value {
+            input {
+              // text-align: center;
+              border: none;
             }
+            input:focus {
+              outline: none;
+              border: none;
+              // background: #f2f3f5;
+            }
+          }
         }
       }
     }
@@ -241,21 +260,31 @@ export default {
               display: flex;
               justify-content: space-between;
               align-items: center;
-              p{
-                  margin-right: 126px 
+              p {
+                margin-right: 126px;
               }
             }
           }
-          .van-cell__value{
-              text-align: left;
-              margin-right: 166px;
+          .van-cell__value {
+            text-align: left;
+            margin-right: 166px;
           }
         }
       }
+      .con4-input {
+        width: 100%;
+        text-align: left;
+        color: red;
+      }
     }
-    .btnSubmi{
-        margin-top: 10px;
+    .btnBox {
+      width: 100%;
+      position: fixed;
+      bottom: 10px;
+      left: 0;
+      .btnSubmi{
         width: 90%;
+      }
     }
   }
 }

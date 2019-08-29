@@ -129,12 +129,13 @@
               </van-uploader>
             </li>
           </ul>
-          <div class="sendBtn">
+          <div class="btnSend">
+            <div class="sendBtn">
             <van-button color="#f4f6f8">保存草稿</van-button>
             <van-button class="BtnTwo" color="#5585f0">提交</van-button>
           </div>
-          <br />
-          <br />
+          </div>
+          
         </van-collapse-item>
       </van-collapse>
     </div>
@@ -233,7 +234,12 @@ export default {
       }
     }
   }
-  .sendBtn{
+  .btnSend{
+    // width: 100%;
+    // position: fixed;
+    // bottom: 10px;
+    // left: 0;
+    .sendBtn{
     margin-top: 10px;
     display: flex;
     justify-content: space-around;
@@ -250,6 +256,7 @@ export default {
         color: #fff;
       }
     }
+  }
   }
   .con2,
   .con13,

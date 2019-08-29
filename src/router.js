@@ -4,11 +4,11 @@ import Home from './views/Home.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
-    { //首页的界面路径
+    {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: Home
     },
     { //流程审查页面
@@ -56,3 +56,22 @@ export default new Router({
     }
   ]
 })
+
+
+// 导航守卫
+// 使用 router.beforeEach 注册一个全局前置守卫，判断用户是否登陆
+router.beforeEach((to, from, next) => {
+  if (to.path === '/Home') {
+    next();
+  } else {
+
+    let token = localStorage.getItem('Authorization');
+    if (token === 'null' || token === '') {
+      next('/Home');
+    } else {
+      next();
+    }
+  }
+});
+
+export default router;

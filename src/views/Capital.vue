@@ -5,12 +5,13 @@
       <van-button class="ret" @click="onRet" icon="arrow-left" type="primary" />
       <h3>资产总览</h3>
     </div>
+    <!-- 圆形统计图 -->
     <Circular/>
   </div>
 </template>
 
 <script>
-import Circular from './../components/capital/Circular'
+import Circular from './../components/capital/CapitalCircular'
 export default {
   name: "capital",
   data() {

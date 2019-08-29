@@ -10,6 +10,7 @@
         <van-icon class="idcard" name="idcard" />
         <h5>付款</h5>
       </div>
+      
     </div>
     <div class="conter"> 
         <ul>
@@ -19,6 +20,7 @@
           <li @click="onShareHolding">全员持股</li>
         </ul>
     </div>
+    
   </div>
 </template>
 
