@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <!-- home -->
     <div v-show="showNav">
       <router-view />
       <van-tabbar v-model="active" v-if="footShow">
@@ -8,6 +9,7 @@
         <van-tabbar-item icon="contact" info="6" to="/About">About</van-tabbar-item>
       </van-tabbar>
     </div>
+    <!-- login -->
     <div id="login" v-show="showLogin">
       <div class="logo">logo</div>
       <div class="login">
@@ -49,8 +51,8 @@ export default {
       show2: false,
       user: "",
       password: "",
-      showNav: false,
-      showLogin: true
+      showNav: true,
+      showLogin: false
     };
   },
   mounted() {
@@ -101,7 +103,8 @@ export default {
         ThisPage === "Establish" ||
         ThisPage === "Approval" ||
         ThisPage === "EnterprisePurchasing" ||
-        ThisPage === "ShareHolding"
+        ThisPage === "ShareHolding" || 
+        ThisPage === 'Detailed'
       ) {
         this.footShow = false;
       } else {

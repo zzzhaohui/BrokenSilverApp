@@ -194,7 +194,7 @@ export default {
   .conter {
     width: 100%;
     text-align: center;
-    background: #f8f8f8;
+    background: #f9f7f8;
     .con1 {
       width: 96%;
       display: inline-block;

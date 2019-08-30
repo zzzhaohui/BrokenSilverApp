@@ -169,7 +169,7 @@ export default {
 .Establish {
   width: 100%;
   text-align: center;
-  background: #d5d5d5;
+  background: #f9f7f8;
   .header {
     .van-hairline--bottom {
       background: #597fae;

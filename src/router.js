@@ -29,6 +29,11 @@ const router = new Router({
       name: 'Capital',
       component: () => import('./views/Capital.vue'),
     },
+    { //detailed资金详细
+      path: '/Detailed',
+      name: 'Detailed',
+      component: () => import('./views/Detailed.vue')
+    },
     { //转账页面
       path: '/Transfer',
       name: 'Transfer',
