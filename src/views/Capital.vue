@@ -69,7 +69,7 @@ export default {
     onSeeDetailed(){
       this.$router.push('/detailed')
     }
-    
+      
   },
   components: {
     chart

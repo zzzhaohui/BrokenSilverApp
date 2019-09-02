@@ -17,6 +17,10 @@
           <span class="van-button__text">查看详情</span>
           <i class="van-icon van-icon-arrow van-button__icon"></i>
         </button>
+        <button @click="onTrans">
+          <span class="van-button__text">转账汇款</span>
+          <i class="van-icon van-icon-arrow van-button__icon"></i>
+        </button>
       </div>
     </div>
     <div class="conter">
@@ -44,8 +48,8 @@ export default {
       //资金总览
       this.$router.push("/Capital");
     },
-    onTransfer() {
-      this.$router.push("/Transfer");
+    onTrans() { //转账汇款
+      this.$router.push("/Trans");
     },
     onEstablish() {
       //创建审批
@@ -99,10 +103,13 @@ export default {
       top: 60px;
       right: 8px;
       font-size: 12px;
+      display: flex;
+      flex-direction: column;
       button {
         padding: 4px 14px;
         border-radius: 10px;
         border: none;
+        margin-bottom: 8px;
       }
     }
   }

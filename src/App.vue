@@ -104,7 +104,8 @@ export default {
         ThisPage === "Approval" ||
         ThisPage === "EnterprisePurchasing" ||
         ThisPage === "ShareHolding" || 
-        ThisPage === 'Detailed'
+        ThisPage === 'Detailed' ||
+        ThisPage === 'Trans'
       ) {
         this.footShow = false;
       } else {

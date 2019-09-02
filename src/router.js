@@ -34,7 +34,12 @@ const router = new Router({
       name: 'Detailed',
       component: () => import('./views/Detailed.vue')
     },
-    { //转账页面
+    {//转账页面1
+      path: '/Trans',
+      name: 'Trans',
+      component: () => import('./views/Trans.vue')
+    },
+    { //转账页面2
       path: '/Transfer',
       name: 'Transfer',
       component: () => import('./views/Transfer.vue')
